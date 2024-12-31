@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.wand</groupId>
-    <artifactId>ReportX-API</artifactId>
+    <artifactId>reportx-api</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -19,6 +19,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.36</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

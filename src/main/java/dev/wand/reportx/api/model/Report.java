@@ -1,19 +1,9 @@
 package dev.wand.reportx.api.model;
 
-import lombok.Getter;
+import dev.wand.reportx.api.enums.ReportStatus;
+import org.jetbrains.annotations.Nullable;
 
 import java.time.Instant;
-import java.util.UUID;
 
-public record Report(UUID victim, UUID operator, String reason, Instant timestamp) {
-
-    @Override
-    public String toString() {
-        return "Report{" +
-                "victim=" + victim +
-                ", operator=" + operator +
-                ", reason='" + reason + '\'' +
-                ", timestamp=" + timestamp +
-                '}';
-    }
+public record Report(String id, ReportPlayer victim, ReportPlayer operator, String reason, Instant timestamp, ReportStatus status, @Nullable String result, @Nullable Instant resultTimestamp) {
 }

@@ -5,5 +5,12 @@ import org.jetbrains.annotations.Nullable;
 
 import java.time.Instant;
 
-public record Report(String id, ReportPlayer victim, ReportPlayer operator, String reason, Instant timestamp, ReportStatus status, @Nullable String result, @Nullable Instant resultTimestamp) {
+public record Report(
+        String id,
+        ReportPlayer victim,
+        ReportPlayer operator,
+        String reason,
+        Instant timestamp,
+        ReportStatus status,
+        @Nullable ReportResult result) {
 }

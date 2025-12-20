@@ -1,11 +1,10 @@
-package dev.wand.reportx.report;
+package dev.wand.reportx.api.report;
 
-import dev.wand.reportx.enums.ReportStatus;
+import dev.wand.reportx.api.enums.ReportStatus;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
-import java.time.LocalDate;
 
 @Getter
 public class Report {

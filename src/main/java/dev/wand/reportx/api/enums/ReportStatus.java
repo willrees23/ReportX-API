@@ -1,4 +1,4 @@
-package dev.wand.reportx.enums;
+package dev.wand.reportx.api.enums;
 
 public enum ReportStatus {
 

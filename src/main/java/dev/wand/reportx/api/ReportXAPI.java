@@ -1,6 +1,6 @@
-package dev.wand.reportx;
+package dev.wand.reportx.api;
 
-import dev.wand.reportx.report.ReportService;
+import dev.wand.reportx.api.report.ReportService;
 import lombok.Getter;
 import lombok.Setter;
 

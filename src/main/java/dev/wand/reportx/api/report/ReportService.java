@@ -1,6 +1,6 @@
-package dev.wand.reportx.report;
+package dev.wand.reportx.api.report;
 
-import dev.wand.reportx.enums.ReportStatus;
+import dev.wand.reportx.api.enums.ReportStatus;
 
 import java.util.List;
 import java.util.Optional;

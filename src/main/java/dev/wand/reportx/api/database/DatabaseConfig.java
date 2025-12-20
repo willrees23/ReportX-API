@@ -1,4 +1,4 @@
-package dev.wand.reportx.database;
+package dev.wand.reportx.api.database;
 
 public record DatabaseConfig(
         String host,

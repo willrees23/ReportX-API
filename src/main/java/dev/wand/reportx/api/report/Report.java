@@ -21,6 +21,7 @@ public class Report {
         this.reason = reason;
         this.server = server;
         this.dateTime = Instant.now();
+        this.status = ReportStatus.PENDING;
     }
 
     private final String id;

@@ -35,7 +35,7 @@ public class Report {
     @Setter
     private Instant resolvedDateTime;
     @Setter
-    private UUID resolvedBy;
+    private UUID resolvedBy, claimedBy;
     @Setter
     private String resolvedReason;
     @Setter
@@ -49,6 +49,7 @@ public class Report {
             String server,
             Instant dateTime,
             ReportStatus status,
+            UUID claimedBy,
             UUID resolvedBy,
             String resolvedReason,
             Instant resolvedDateTime
@@ -60,6 +61,7 @@ public class Report {
         this.server = server;
         this.dateTime = dateTime;
         this.status = status;
+        this.claimedBy = claimedBy;
         this.resolvedBy = resolvedBy;
         this.resolvedReason = resolvedReason;
         this.resolvedDateTime = resolvedDateTime;

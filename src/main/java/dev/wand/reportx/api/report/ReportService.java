@@ -8,6 +8,7 @@ import dev.wand.reportx.api.report.callback.ResolveReportCallback;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface ReportService {
 
@@ -19,5 +20,5 @@ public interface ReportService {
     void fetchReportsByStatus(ReportStatus status, FetchReportsCallback callback);
 
     // Asynchronous resolve operation with callback indicating success
-    void resolveReport(String reportId, String staffUuid, String reason, ReportStatus status, ResolveReportCallback callback);
+    void resolveReport(String reportId, UUID staffUuid, String reason, ReportStatus status, ResolveReportCallback callback);
 }

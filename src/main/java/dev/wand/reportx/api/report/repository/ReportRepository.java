@@ -5,6 +5,7 @@ import dev.wand.reportx.api.report.Report;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public interface ReportRepository {
 
@@ -14,5 +15,5 @@ public interface ReportRepository {
 
     List<Report> findByStatus(ReportStatus status);
 
-    void updateStatus(String reportId, String staffUuid, String reason, ReportStatus status);
+    void updateStatus(String reportId, UUID staffUuid, String reason, ReportStatus status);
 }

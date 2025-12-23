@@ -5,16 +5,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Instant;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Getter
 public class Report {
 
-    public Report(String creator, String target, String reason) {
+    public Report(UUID creator, UUID target, String reason) {
         this(creator, target, reason, "global");
     }
 
-    public Report(String creator, String target, String reason, String server) {
+    public Report(UUID creator, UUID target, String reason, String server) {
         this.id = randomId();
         this.creator = creator;
         this.target = target;
@@ -25,8 +26,7 @@ public class Report {
     }
 
     private final String id;
-    private final String creator;
-    private final String target;
+    private final UUID creator, target;
     private final String reason;
     private final String server;
     @Setter
@@ -35,9 +35,35 @@ public class Report {
     @Setter
     private Instant resolvedDateTime;
     @Setter
-    private String resolvedBy, resolvedReason;
+    private UUID resolvedBy;
+    @Setter
+    private String resolvedReason;
     @Setter
     private ReportStatus status;
+
+    public Report(
+            String id,
+            UUID creator,
+            UUID target,
+            String reason,
+            String server,
+            Instant dateTime,
+            ReportStatus status,
+            UUID resolvedBy,
+            String resolvedReason,
+            Instant resolvedDateTime
+    ) {
+        this.id = id;
+        this.creator = creator;
+        this.target = target;
+        this.reason = reason;
+        this.server = server;
+        this.dateTime = dateTime;
+        this.status = status;
+        this.resolvedBy = resolvedBy;
+        this.resolvedReason = resolvedReason;
+        this.resolvedDateTime = resolvedDateTime;
+    }
 
 
     private static String randomId() {
